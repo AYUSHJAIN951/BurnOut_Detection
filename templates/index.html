@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+    <Body  style="background-color:rgb(210, 226, 223);" >
+        <h1 align="center">CHECK YOUR BURNOUT STATUS</h1>
+          
+           <h1 align="center"> Overview </h1>
+             <h3>   Mental exhaustion can happen to anyone who experiences long-term stress. It can make you feel overwhelmed and emotionally drained, and make your responsibilities and problems seem impossible to overcome.
+            
+            Feelings of detachment and apathy can wreak havoc on all aspects of your personal and work life.
+            
+            You may feel trapped in your situation and as if the power to do anything about it is out of your hands, but you can overcome mental exhaustion with some help.
+     
+        </h3> 
+         
+  <form margin=20 action="#" method="POST" class="form-horizontal" enctype="multipart/form-data" >    
+    <table  class="none">    
+<tr align="center">    
+    <td align="center"><b><big><h3><label align="center">ENTER VALUES:- : </label></h3></big></b></td>    
+</tr>    
+<tr><h4>
+<tr><td><div><br><b>Employee ID        :-  </b></td><td><input type="text" name="ID" id="id" placeholder="EMPLOYEE ID"   required /><br></td></div></tr>    
+<tr><td><div><br><b>Name               :-  </b></td><td><input type="text" name="NAME" id="name" placeholder="EMPLOYEE NAME" required /></td></div></tr>    
+<tr><td><div><br><b>Designation(1-10)        :-  </b></td><td><input type="text" name="DESGN" placeholder="Designation    " required></td></div></tr> 
+<tr><div><td><br><b>Gender             :-  </b></td><td><select id="GENDER" name="GENDER"><option value="Male">MALE</option>
+    <option value="Female">FEMALE</option></select></td></div></tr> 
+<tr><div><td><br><b>Company            :-  </b></td><td><select id="Company"><option value="Service">SERVICE</option>
+    <option value="Product">PRODUCT</option></select></td></div></tr>    
+<tr><div><td><br><b>Work From Home     :-  </b></td><td><select id="WFH"><option value="Yes">Yes</option>
+    <option value="No">No</option></select></td></div></tr> 
+<tr><div><td><br><b>Resource Allocation(1-10)       :-  </b></td><td><input type="text" name="RA" placeholder="Resource Allocation" /></td></div></tr>    
+<tr><div><td><br><b>Mental Fatigue Score(1-10)       :-  </b></td><td><input type="text" name="MFS" placeholder="Mental Fatigue Score" /></td></div></tr>    
+<tr><div><td><br><b>Job Start Date       :-  </b></td><td><input type="date" name="JD" min="2008-01-01" max="2018-12-31" placeholder="Job Start Date" /></td></div></tr>    
+
+</h4>
+<tr><div><td><br><B><button type="submit" value="submit" placeholder="Submit">Submit  </button></B></div></td></tr>    
+</tr>    
+
+</form> 
+<!-- <input type="submit" name="submit_button" value="Do Something"> -->
+<!-- <input type="submit" name="submit_button" value="Do Something Else"> -->
+
+  </table>    
+  <b>
+      <br>
+  <h3><tr>Your Burnout score might be {{pred}}%</tr></b><br>
+  <b>{{tip}}</h3>
+    <h4>
+  Relaxation techniques<br>
+-Yoga<br>
+-Deep breathing<br>
+-Biofeedback<br>
+-Massage<br>
+-Aromatherapy<br>
+-Progressive relaxation therapy</h4>
+</b>
+</body>
+</html>
