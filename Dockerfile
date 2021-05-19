@@ -19,19 +19,19 @@ RUN apk add --no-cache --update \
     
 RUN pip install --upgrade cython
 
-RUN pip install numpy
-
-
 # RUN pip install numpy
-RUN pip install pandas
-RUN pip install scikit-learn
-RUN pip install scipy
-# RUN pip install setuptools
+
+
+# # RUN pip install numpy
+# RUN pip install pandas
+# RUN pip install scikit-learn
 # RUN pip install scipy
-RUN pip install sklearn
-RUN pip install flask
-RUN pip install pickle-mixin
-RUN pip install bson
+# # RUN pip install setuptools
+# # RUN pip install scipy
+# RUN pip install sklearn
+# RUN pip install flask
+# RUN pip install pickle-mixin
+# RUN pip install bson
 
 
 
@@ -39,5 +39,5 @@ WORKDIR /app
 
 COPY . /app
 
-# ADD requirements.txt .
-# RUN pip  install -r requirements.txt
+ADD requirements.txt .
+RUN pip  install -r requirements.txt
